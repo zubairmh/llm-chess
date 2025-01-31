@@ -9,12 +9,11 @@ from wand.image import Image
 
 # Initialize pygame
 pygame.init()
-screen = pygame.display.set_mode((512, 600))  # Increased height to fit extra data
+screen = pygame.display.set_mode((512, 600))  
 pygame.display.set_caption("Hermes 3 LLaMA 3.1 vs DeepSeek-R1-Qwen-7B Chess")
 
-# Initialize pygame font
 pygame.font.init()
-font = pygame.font.Font(None, 32)  # Default font with size 32 for better visibility
+font = pygame.font.Font(None, 32)  
 
 # Initialize pygame for sound
 pygame.mixer.init()
@@ -22,7 +21,8 @@ move_sound = pygame.mixer.Sound("move-self.mp3")
 check_sound = pygame.mixer.Sound("capture.mp3")
 notify_sound = pygame.mixer.Sound("notify.mp3")
 # Generate a unique game ID
-gid = str(uuid.uuid4()) # "6e54fc19-3748-4649-b398-22b404e07d9f" #
+gid = str(uuid.uuid4()) 
+
 print("Game ID:", gid)
 
 # Initialize AI clients
@@ -38,8 +38,8 @@ deepseek_client = outlines.models.openai(
 def display_message(text, duration=3):
     """Displays a message on a black screen for a given duration."""
     screen.fill((0, 0, 0))  # Black background
-    message_surface = font.render(text, True, (255, 255, 255))  # White text
-    text_rect = message_surface.get_rect(center=(256, 300))  # Center text
+    message_surface = font.render(text, True, (255, 255, 255)) 
+    text_rect = message_surface.get_rect(center=(256, 300))  
     screen.blit(message_surface, text_rect)
     pygame.display.flip()
     time.sleep(duration)
