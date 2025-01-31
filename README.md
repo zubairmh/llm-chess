@@ -1,8 +1,10 @@
 # LLM Chess Playground
 
+![image](https://github.com/user-attachments/assets/84f9eca1-e12c-4e63-b2e0-fbd2c455c839)
+
 Playground to test LLM's in chess
 
-Currently set to Deepseek-R1-Distil-7B vs Hermes 3 Llama 3.1 3B
+Currently set to Deepseek-R1-Distil-Qwen-7B vs Hermes 3 Llama 3.1 8B
 
 # Setup
 
